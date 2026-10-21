@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #120c18;
+    user-select: none;
+    -webkit-user-select: none;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+.font-comic {
+  font-family: 'Bangers', cursive, sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.font-hindi {
+  font-family: 'Yatra One', cursive, sans-serif;
+}
+
+.font-teko {
+  font-family: 'Teko', sans-serif;
+  letter-spacing: 0.03em;
+}
+
+/* Comic halftone dot overlay */
+.halftone-overlay {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.18) 15%, transparent 16%);
+  background-size: 8px 8px;
+  pointer-events: none;
+}
+
+/* Police caution tape stripes */
+.caution-stripes {
+  background: repeating-linear-gradient(
+    -45deg,
+    #ffd23f,
+    #ffd23f 14px,
+    #1d1424 14px,
+    #1d1424 28px
+  );
+}
+
+/* Comic text drop shadows */
+.comic-shadow {
+  text-shadow: 
+    3px 3px 0 #120c18,
+    -1px -1px 0 #120c18,
+    1px -1px 0 #120c18,
+    -1px 1px 0 #120c18,
+    1px 1px 0 #120c18;
+}
+
+.comic-shadow-red {
+  text-shadow: 
+    4px 4px 0 #b30000,
+    -2px -2px 0 #120c18,
+    2px -2px 0 #120c18,
+    -2px 2px 0 #120c18,
+    2px 2px 0 #120c18;
+}
+
+.comic-shadow-yellow {
+  text-shadow: 
+    3px 3px 0 #d97706,
+    -1px -1px 0 #120c18,
+    1px -1px 0 #120c18,
+    -1px 1px 0 #120c18,
+    1px 1px 0 #120c18;
+}
+
+/* Cardboard placard badge */
+.placard-btn {
+  background: #fdf6e2;
+  color: #1a1220;
+  border: 3.5px solid #1a1220;
+  box-shadow: 4px 5px 0 #1a1220;
+  transition: all 0.12s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: rotate(-0.5deg);
+}
+
+.placard-btn:hover {
+  transform: translateY(-2px) rotate(-1deg);
+  box-shadow: 6px 7px 0 #1a1220;
+  background: #ffffff;
+}
+
+.placard-btn:active {
+  transform: translateY(2px) rotate(0deg);
+  box-shadow: 1px 2px 0 #1a1220;
+}
+
+/* Siren pulse animation */
+@keyframes siren-glow {
+  0%, 100% {
+    box-shadow: 0 0 40px rgba(220, 38, 38, 0.8), 0 0 80px rgba(220, 38, 38, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(37, 99, 235, 0.8), 0 0 80px rgba(37, 99, 235, 0.4);
+  }
+}
+
+.siren-active {
+  animation: siren-glow 0.8s infinite alternate;
+}

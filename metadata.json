@@ -1,0 +1,6 @@
+{
+  "name": "The Jantar Mantar Run: To Parliament",
+  "description": "A comic arcade protest run through Delhi. Dodge the cops, jump barricades, and reach Parliament from Jantar Mantar!",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
